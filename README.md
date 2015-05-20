@@ -11,11 +11,15 @@ Installation
 
 * Run the following command 
 
-`$ joomla plugin:install joomlatools/joomla-console-  capistrano-plugin`
+	`$ joomla plugin:install joomlatools/joomla-console-  capistrano-plugin`
 
-* Verify that the plugin is available:`$ joomla plugin:list`
+* Verify that the plugin is available: 
 
-* You can now deploy an existing Capistrano project by:`$ joomla capistrano:deploy sitenname`
+	`$ joomla plugin:list`
+
+* You can now deploy an existing Capistrano project by: 
+
+	`$ joomla capistrano:deploy sitenname`
 
 * If you don't have an existing Capistrano project set up, the plugin will create one for you. Please refer to the getting started instructions as to how to configure this:
 [http://capistranorb.com/documentation/getting-started/installation/](http://capistranorb.com/documentation/getting-started/installation4)
