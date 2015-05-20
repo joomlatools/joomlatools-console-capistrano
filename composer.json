@@ -1,0 +1,17 @@
+{
+    "name": "joomla-console-capistrano-plugin",
+    "license": "MPLv2",
+    "description": "A simple wrapper to execute pre-configured capistrano projects",
+    "homepage": "https://github.com/joomlatools/joomla-console-capistrano-plugin",
+    "type": "joomla-console-plugin",
+    "authors": [
+        {
+            "name": "Joomlatools",
+            "email": "info@joomlatools.com",
+            "homepage": "https://www.joomlatools.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {"MyCompany\\": "/"}
+    }
+}
