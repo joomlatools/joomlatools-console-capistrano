@@ -35,9 +35,15 @@ class CapistranoDeploy extends SiteAbstract
     {
         parent::execute($input, $output);
 
-        if(!file_exists($this->target_dir . '/CapFile'))
+        if(!file_exists($this->target_dir . '/Capfile'))
         {
             `cap install`;
+
+            `mkdir .capistrano`;
+
+            `touch .capistrano/metrics`;
+
+            `echo "none" > .capistrano/metrics`;
 
             $output->writeln('<info>Created blank Cap project</info>');
             $output->writeln('<comment>For installation and configuration help, please refer to the documentation:</comment>');
