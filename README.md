@@ -3,7 +3,7 @@ Joomla Console - Capistrano Plugin
 
 This is a simple wrapper command for Capistrano projects used in conjuction with the  Joomlatools [Joomla Console](https://github.com/joomlatools/joomla-console).
 
-The plugin adds a `capistrano:deply` command which you can use to
+The plugin adds a `capistrano:deploy` command which you can use to
 quickly deploy any previously configured project to your servers.
 
 Installation
@@ -11,7 +11,7 @@ Installation
 
 * Run the following command 
 
-	`$ joomla plugin:install joomlatools/joomla-console-  capistrano-plugin`
+	`$ joomla plugin:install joomlatools/joomla-console-capistrano-plugin`
 
 * Verify that the plugin is available: 
 
@@ -48,4 +48,4 @@ See the list of [contributors](https://github.com/joomlatools/joomla-console-bac
 
 ## License
 
-The `joomlatools/joomla-console-backup` plugin is licensed under the MPL v2 license - see the LICENSE file for details.
+The `joomlatools/joomla-console-capistrano` plugin is licensed under the MPL v2 license - see the LICENSE file for details.
