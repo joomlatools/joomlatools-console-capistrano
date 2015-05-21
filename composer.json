@@ -1,8 +1,8 @@
 {
-    "name": "joomla-console-capistrano-plugin",
+    "name": "joomla-console-capistrano",
     "license": "MPLv2",
     "description": "A simple wrapper to execute pre-configured capistrano projects",
-    "homepage": "https://github.com/joomlatools/joomla-console-capistrano-plugin",
+    "homepage": "https://github.com/joomlatools/joomla-console-capistrano",
     "type": "joomla-console-plugin",
     "authors": [
         {
