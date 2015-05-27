@@ -19,7 +19,7 @@ Installation
 
 * You can now deploy an existing Capistrano project by: 
 
-	`$ joomla capistrano:deploy sitenname`
+	`$ joomla capistrano:deploy sitename`
 
 * If you don't have an existing Capistrano project set up, the plugin will create one for you. Please refer to the getting started instructions as to how to configure this:
 [http://capistranorb.com/documentation/getting-started/installation/](http://capistranorb.com/documentation/getting-started/installation4)

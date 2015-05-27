@@ -1,5 +1,5 @@
 {
-    "name": "joomla-console-capistrano",
+    "name": "joomlatools/joomla-console-capistrano",
     "license": "MPLv2",
     "description": "A simple wrapper to execute pre-configured capistrano projects",
     "homepage": "https://github.com/joomlatools/joomla-console-capistrano",
