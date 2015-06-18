@@ -11,7 +11,7 @@ Installation
 
 * Run the following command 
 
-	`$ joomla plugin:install joomlatools/joomla-console-capistrano-plugin`
+	`$ joomla plugin:install joomlatools/joomla-console-capistrano`
 
 * Verify that the plugin is available: 
 
