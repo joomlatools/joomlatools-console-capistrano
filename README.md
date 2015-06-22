@@ -33,12 +33,23 @@ Requirements
 
 In order for Capistrano to work you must have the following:
 
-* Configured your remote machine(s) to work with Capistrano: [https://www.digitalocean.com/community/tutorials/how-to-use-capistrano-to-automate-deployments-getting-strted](https://www.digitalocean.com/community/tutorials/how-to-use-capistrano-to-automate-deployments-getting-strted)
+* Configured your remote machine(s) to work with Capistrano: [http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/)
 * SSH access between both your local vagrant box and your remote server via the deploy user account
 * SSH access between your local vagrant box and your GitHub account
 * A Github repository that has been cloned in your joomla-vagrant box from this point forward called your 'project'
 
 Capistrano deploys your project into a symlinked current/ directory on your server, so you'll need to set your document root to that folder via symlinks once again.
+
+On your remote machine you will need the following installed:
+
+* Ruby >= 1.9
+
+Required Gems:
+
+* capistrano (> 3.1.0)
+* capistrano-composer
+
+These can be installed manually with `gem install <gem name>`.
 
 Initialisation
 --------------
