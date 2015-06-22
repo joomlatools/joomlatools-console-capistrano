@@ -28,24 +28,97 @@ Installation
 
    `$ joomla help capistrano:deploy`
 
-Writing your own plugin
------------------------
+Requirements
+------------
 
-It's very easy to add custom commands to the tool. We recommended installing this plugin on your local setup and then starting off from there. You can find a step-by-step description in [our developer documentation](http://developer.joomlatools.com/tools/console/plugins.html#creating-custom-plugins).
+In order for Capistrano to work you must have the following:
 
-## Requirements
+* Configured your remote machine(s) to work with Capistrano: [https://www.digitalocean.com/community/tutorials/how-to-use-capistrano-to-automate-deployments-getting-strted](https://www.digitalocean.com/community/tutorials/how-to-use-capistrano-to-automate-deployments-getting-strted)
+* SSH access between both your local vagrant box and your remote server via the deploy user account
+* SSH access between your local vagrant box and your GitHub account
+* A Github repository that has been cloned in your joomla-vagrant box from this point forward called your 'project'
 
-* Composer
-* [Joomla Console](https://github.com/joomlatools/joomla-console) >= 1.3
+Capistrano deploys your project into a symlinked current/ directory on your server, so you'll need to set your document root to that folder via symlinks once again.
 
-## Contributing
+Initialisation
+--------------
 
-Fork the project, create a feature branch, and send us a pull request.
+In order convert your project into a Capistrano enabled project issue the following command via vagrant terminal:
 
-## Authors
+`$ joomla capistrano:deploy sitename`
 
-See the list of [contributors](https://github.com/joomlatools/joomla-console-backup-plugin/contributors).
+replacing sitename with the name of your local project. 
 
-## License
+If your project is already configured to work with Capistrano, then you can capify your project to any preconfigured environment via the following command:
 
-The `joomlatools/joomla-console-capistrano` plugin is licensed under the MPL v2 license - see the LICENSE file for details.
+`$ joomla capistrano:deploy sitename -e staging`
+
+replacing staging with the any preconfigured environment found within /config/deploy
+
+However should no Capistrano project be found then a new Capistrano project will be created.
+
+Configuration
+-------------
+
+Initialising your Capistrano project will provide you with two base configuration files/ environments (production and staging) that you can configure.
+
+Configuration settings that are generic between these two environments can be made within: 
+
+* config/deploy/deploy.rb
+
+Such generic settings could be your application name and the git repository you will use: 
+
+```
+set :application, "Capistrano"
+
+set :repo_url, "git@github.com:joomlatools/joomla-console-capistrano.git"
+```
+
+Environment specific details, should be made in the following files:
+
+* config/deploy/production.rb 
+* config/deploy/staging.rb 
+
+And example configuration is given below: 
+
+```
+set :stage_url, "http://www.example.com"
+server "XXX.XXX.XX.XXX", 
+user: "SSHUSER", roles: %w{web app db}
+set :deploy_to, "/deploy/to/path"
+set :branch, "master"
+```
+
+Capistrano is really configurable! To see a complete list of options please visit the following page: 
+[http://capistranorb.com/documentation/getting-started/configuration/](http://capistranorb.com/documentation/getting-started/configuration/)
+
+Should you need to connect to any further environments simply copy one of these environment config/deploy/*.rb files, name appropriately and configure to your needs.
+
+.gitignore 
+----------
+
+Initialising Capistrano is going to add two folders to your local project:
+
+* /.capistrano
+* /config 
+
+and one file in the root of your project:
+
+* Capfile
+
+You will want to add both files and folders to your .gitignore to avoid committing sensitive information to your repository.
+
+Usage 
+-----
+
+Once your local Capistrano project is configured and you can easily deploy your project via the following command:
+
+`$ joomla capistrano:deploy sitename -e staging`
+
+or
+
+`$ joomla capistrano:deploy sitename -e production`
+
+For a complete list of options, run:
+
+`$ joomla help capistrano:deploy`
