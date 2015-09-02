@@ -12,7 +12,9 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class CapistranoDeploy extends SiteAbstract
+use Joomlatools\Console\Command\Site\AbstractSite;
+
+class CapistranoDeploy extends AbstractSite
 {
     protected function configure()
     {

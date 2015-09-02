@@ -12,6 +12,6 @@
         }
     ],
     "autoload": {
-        "psr-0": {"MyCompany\\": "/"}
+        "psr-0": {"Joomlatools\\": "/"}
     }
 }
