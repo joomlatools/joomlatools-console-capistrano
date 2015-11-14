@@ -1,7 +1,7 @@
 Joomla Console - Capistrano Plugin
 ===============================
 
-This is a simple wrapper command for Capistrano projects used in conjuction with the  Joomlatools [Joomla Console](https://github.com/joomlatools/joomla-console).
+This is a simple wrapper command for Capistrano projects used in conjuction with the [Joomlatools Console](https://github.com/joomlatools/joomla-console).
 
 The plugin adds a `capistrano:deploy` command which you can use to
 quickly deploy any previously configured project to your servers.
