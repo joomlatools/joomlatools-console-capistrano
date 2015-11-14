@@ -133,3 +133,24 @@ or
 For a complete list of options, run:
 
 `$ joomla help capistrano:deploy`
+
+## Contributing
+
+The `joomlatools/joomla-console-capistrano` plugin is an open source, community-driven project. Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
+
+## Contributors
+
+See the list of [contributors](https://github.com/joomlatools/joomla-console-capistrano/contributors).
+
+## License 
+
+The `joomlatools/joomla-console-capistrano` plugin is free and open-source software licensed under the [MPLv2 license](LICENSE.txt).
+
+## Community
+
+Keep track of development and community news.
+
+* Follow [@joomlatoolsdev on Twitter](https://twitter.com/joomlatoolsdev)
+* Join [joomlatools/dev on Gitter](http://gitter.im/joomlatools/dev)
+* Read and subscribe to the [Joomlatools Developer Blog](https://develeoper.joomlatools.com/blog/)
+* Subscribe to the [Joomlatools Newsletter](http://www.joomlatools.com/newsletter)
