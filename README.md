@@ -1,7 +1,7 @@
 Joomla Console - Capistrano Plugin
 ===============================
 
-This is a simple wrapper command for Capistrano projects used in conjuction with the [Joomlatools Console](https://github.com/joomlatools/joomla-console).
+This is a simple wrapper command for Capistrano projects used in conjuction with the [Joomlatools Console](https://github.com/joomlatools/joomlatools-console).
 
 The plugin adds a `capistrano:deploy` command which you can use to
 quickly deploy any previously configured project to your servers.
@@ -9,15 +9,15 @@ quickly deploy any previously configured project to your servers.
 Installation
 ------------
 
-* Run the following command 
+* Run the following command
 
-	`$ joomla plugin:install joomlatools/joomla-console-capistrano`
+	`$ joomla plugin:install joomlatools/console-capistrano`
 
-* Verify that the plugin is available: 
+* Verify that the plugin is available:
 
 	`$ joomla plugin:list`
 
-* You can now deploy an existing Capistrano project by: 
+* You can now deploy an existing Capistrano project by:
 
 	`$ joomla capistrano:deploy sitename`
 
@@ -36,7 +36,7 @@ In order for Capistrano to work you must have the following:
 * Configured your remote machine(s) to work with Capistrano: [http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/)
 * SSH access between both your local vagrant box and your remote server via the deploy user account
 * SSH access between your local vagrant box and your GitHub account
-* A Github repository that has been cloned in your joomla-vagrant box from this point forward called your 'project'
+* A Github repository that has been cloned in your [Joomlatools Vagrant](http://developer.joomlatools.com/tools/vagrant.html) box from this point forward called your 'project'
 
 Capistrano deploys your project into a symlinked current/ directory on your server, so you'll need to set your document root to that folder via symlinks once again.
 
@@ -54,11 +54,11 @@ These can be installed manually with `gem install <gem name>`.
 Initialisation
 --------------
 
-In order convert your project into a Capistrano enabled project issue the following command via vagrant terminal:
+In order to convert your project into a Capistrano enabled project issue the following command via vagrant terminal:
 
 `$ joomla capistrano:deploy sitename`
 
-replacing sitename with the name of your local project. 
+replacing sitename with the name of your local project.
 
 If your project is already configured to work with Capistrano, then you can capify your project to any preconfigured environment via the following command:
 
@@ -73,45 +73,45 @@ Configuration
 
 Initialising your Capistrano project will provide you with two base configuration files/ environments (production and staging) that you can configure.
 
-Configuration settings that are generic between these two environments can be made within: 
+Configuration settings that are generic between these two environments can be made within:
 
 * config/deploy/deploy.rb
 
-Such generic settings could be your application name and the git repository you will use: 
+Such generic settings could be your application name and the git repository you will use:
 
 ```
 set :application, "Capistrano"
 
-set :repo_url, "git@github.com:joomlatools/joomla-console-capistrano.git"
+set :repo_url, "git@github.com:foo/bar.git"
 ```
 
 Environment specific details, should be made in the following files:
 
-* config/deploy/production.rb 
-* config/deploy/staging.rb 
+* config/deploy/production.rb
+* config/deploy/staging.rb
 
-And example configuration is given below: 
+And example configuration is given below:
 
 ```
 set :stage_url, "http://www.example.com"
-server "XXX.XXX.XX.XXX", 
+server "XXX.XXX.XX.XXX",
 user: "SSHUSER", roles: %w{web app db}
 set :deploy_to, "/deploy/to/path"
 set :branch, "master"
 ```
 
-Capistrano is really configurable! To see a complete list of options please visit the following page: 
+Capistrano is really configurable! To see a complete list of options please visit the following page:
 [http://capistranorb.com/documentation/getting-started/configuration/](http://capistranorb.com/documentation/getting-started/configuration/)
 
 Should you need to connect to any further environments simply copy one of these environment config/deploy/*.rb files, name appropriately and configure to your needs.
 
-.gitignore 
+.gitignore
 ----------
 
 Initialising Capistrano is going to add two folders to your local project:
 
 * /.capistrano
-* /config 
+* /config
 
 and one file in the root of your project:
 
@@ -119,7 +119,7 @@ and one file in the root of your project:
 
 You will want to add both files and folders to your .gitignore to avoid committing sensitive information to your repository.
 
-Usage 
+Usage
 -----
 
 Once your local Capistrano project is configured and you can easily deploy your project via the following command:
@@ -136,15 +136,15 @@ For a complete list of options, run:
 
 ## Contributing
 
-The `joomlatools/joomla-console-capistrano` plugin is an open source, community-driven project. Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
+This plugin is an open source, community-driven project. Contributions are welcome from everyone. We have [contributing guidelines](CONTRIBUTING.md) to help you get started.
 
 ## Contributors
 
-See the list of [contributors](https://github.com/joomlatools/joomla-console-capistrano/contributors).
+See the list of [contributors](https://github.com/joomlatools/joomlatools-console-capistrano/contributors).
 
-## License 
+## License
 
-The `joomlatools/joomla-console-capistrano` plugin is free and open-source software licensed under the [MPLv2 license](LICENSE.txt).
+This plugin is free and open-source software licensed under the [MPLv2 license](LICENSE.txt).
 
 ## Community
 
