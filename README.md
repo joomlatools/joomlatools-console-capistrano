@@ -1,7 +1,7 @@
 Joomla Console - Capistrano Plugin
 ===============================
 
-This is a simple wrapper command for Capistrano projects used in conjuction with the [Joomlatools Console](https://github.com/joomlatools/joomlatools-console).
+This is a simple wrapper command for Capistrano projects used in conjuction with the [Joomlatools Console](https://www.joomlatools.com/developer/tools/console/).
 
 The plugin adds a `capistrano:deploy` command which you can use to
 quickly deploy any previously configured project to your servers.
@@ -36,7 +36,7 @@ In order for Capistrano to work you must have the following:
 * Configured your remote machine(s) to work with Capistrano: [http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/)
 * SSH access between both your local vagrant box and your remote server via the deploy user account
 * SSH access between your local vagrant box and your GitHub account
-* A Github repository that has been cloned in your [Joomlatools Vagrant](http://www.joomlatools.com/developer/tools/vagrant/) box from this point forward called your 'project'
+* A Github repository that has been cloned in your [Joomlatools Vagrant](https://www.joomlatools.com/developer/tools/vagrant/) box from this point forward called your 'project'
 
 Capistrano deploys your project into a symlinked current/ directory on your server, so you'll need to set your document root to that folder via symlinks once again.
 
@@ -152,5 +152,5 @@ Keep track of development and community news.
 
 * Follow [@joomlatoolsdev on Twitter](https://twitter.com/joomlatoolsdev)
 * Join [joomlatools/dev on Gitter](http://gitter.im/joomlatools/dev)
-* Read the [Joomlatools Developer Blog](http://www.joomlatools.com/developer/blog/)
-* Subscribe to the [Joomlatools Developer Newsletter](http://www.joomlatools.com/developer/newsletter/)
+* Read the [Joomlatools Developer Blog](https://www.joomlatools.com/developer/blog/)
+* Subscribe to the [Joomlatools Developer Newsletter](https://www.joomlatools.com/developer/newsletter/)
